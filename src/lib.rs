@@ -1,5 +1,5 @@
-use std::sync::atomic::Ordering::Relaxed;
 use std::sync::atomic::AtomicU8;
+use std::sync::atomic::Ordering::Relaxed;
 
 use utime::Utime;
 
@@ -92,9 +92,7 @@ pub struct Ulogger {
 
 impl Ulogger {
     pub fn new() -> Ulogger {
-        Self{
-            fragments: vec![],
-        }
+        Self { fragments: vec![] }
     }
 
     pub fn add_data(&mut self, key: &str, value: &str) {
